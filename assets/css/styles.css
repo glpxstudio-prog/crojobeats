@@ -340,14 +340,17 @@ p{ margin:0 0 1rem; }
 
 /* ── Booking calendar ───────────────────────────────────────────────────── */
 
+/* Wrapper for the embedded GoHighLevel booking widget. The widget renders on a
+   white ground, so it sits in a light card rather than fighting the dark page. */
 .calendar{
-  background:var(--surface);
+  background:#fff;
   border:1px solid var(--line);
   border-radius:var(--radius-lg);
   overflow:hidden;
+  padding:8px;
 }
 .calendar iframe{
-  display:block; width:100%; min-height:640px; border:0; background:#fff;
+  display:block; width:100%; min-height:700px; border:0; background:#fff;
 }
 .calendar__fallback{ text-align:center; padding:clamp(46px,7vw,76px) 26px; }
 .calendar__icon{ font-size:2.6rem; line-height:1; margin-bottom:14px; }
@@ -389,6 +392,18 @@ p{ margin:0 0 1rem; }
 }
 .contact__list a{ text-decoration:none; font-weight:550; }
 .contact__list a:hover{ color:var(--red-soft); }
+
+/* Wrapper for the embedded GoHighLevel "Studio Inquiry" form. */
+.formframe{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  padding:8px;
+}
+.formframe iframe{
+  display:block; width:100%; min-height:700px; border:0; background:#fff;
+}
 
 .contact__form{
   background:var(--surface); border:1px solid var(--line);
