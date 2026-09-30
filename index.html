@@ -259,7 +259,11 @@
             <li>Master included</li>
             <li>Book your hours on the calendar below</li>
           </ul>
-          <!-- TODO: replace with your Stripe Payment Link for the $318 recurring plan -->
+          <!--
+            TODO: this still points at the old Duda checkout, which does take payments today.
+            Once Stripe is connected to the GoHighLevel sub-account, replace this href with
+            the GHL payment link for the "Everything Bundle - Monthly Membership" product.
+          -->
           <a class="btn btn--primary btn--full" href="https://www.crojobeats.com/product#Subscribtion" target="_blank" rel="noopener">Subscribe now</a>
         </div>
 
@@ -300,25 +304,23 @@
       </header>
 
       <!--
-        ════════ EMBED YOUR REAL CALENDAR ════════
-        Your short booking link is: https://calendar.app.google/1Xe4EKVP82CFqFUh7
-        Google gives a separate EMBED code for that same schedule:
-          Google Calendar → Appointment schedules → open your schedule
-          → "Open booking page" → the "</> " embed button → copy the <iframe>
-        Paste that iframe INSIDE <div class="calendar"> below, and delete the
-        .calendar__fallback block. The CSS already makes the iframe responsive.
+        GoHighLevel booking calendar — "Studio Session"
+        Calendar ID: QTbw4GLE0MvALS8kEc63
+        Bookings land in the Cannis Rojo Production CRM automatically.
+        To swap calendars, change the ID in the iframe src and the id attribute.
       -->
       <div class="calendar">
-        <div class="calendar__fallback">
-          <div class="calendar__icon" aria-hidden="true">📅</div>
-          <h3>Open the booking calendar</h3>
-          <p>Pick any open slot on the Cannis Rojo Production schedule. Membership hours can be booked here too.</p>
-          <a class="btn btn--primary" href="https://calendar.app.google/1Xe4EKVP82CFqFUh7" target="_blank" rel="noopener">Choose a time →</a>
-        </div>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/booking/QTbw4GLE0MvALS8kEc63"
+          id="QTbw4GLE0MvALS8kEc63_1759000000000"
+          title="Book a studio session with Cannis Rojo Production"
+          scrolling="no"
+          loading="lazy"></iframe>
       </div>
 
       <p class="note">
         Members: your 8 monthly hours are booked through this same calendar.
+        Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/QTbw4GLE0MvALS8kEc63" target="_blank" rel="noopener">Open it in a new tab →</a>
       </p>
     </div>
   </section>
@@ -370,18 +372,26 @@
       </div>
 
       <!--
-        TODO: this form needs a form handler because GitHub Pages is static.
-        Easiest: create a free form at https://formspree.io , then replace
-        YOUR_FORM_ID below. Until then the form shows a friendly fallback.
+        GoHighLevel form — "Studio Inquiry"
+        Form ID: 5HuKSS4QOqiiYPeRBPS7
+        Submissions create a contact in the Cannis Rojo Production CRM.
+        Height is set automatically by form_embed.js at the bottom of this page.
       -->
-      <form class="contact__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label>Name<input type="text" name="name" required autocomplete="name"></label>
-        <label>Email<input type="email" name="email" required autocomplete="email"></label>
-        <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
-        <label>What do you need?<textarea name="message" rows="5" required placeholder="Recording, beats, mix, master, membership…"></textarea></label>
-        <button class="btn btn--primary btn--full" type="submit">Send message</button>
-        <p class="form__status" id="formStatus" role="status"></p>
-      </form>
+      <div class="formframe">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/5HuKSS4QOqiiYPeRBPS7"
+          id="inline-5HuKSS4QOqiiYPeRBPS7"
+          data-layout='{"id":"INLINE"}'
+          data-trigger-type="alwaysShow"
+          data-activation-type="alwaysActivated"
+          data-deactivation-type="neverDeactivate"
+          data-form-name="Studio Inquiry"
+          data-height="700"
+          data-layout-iframe-id="inline-5HuKSS4QOqiiYPeRBPS7"
+          data-form-id="5HuKSS4QOqiiYPeRBPS7"
+          title="Studio Inquiry"
+          scrolling="no"></iframe>
+      </div>
     </div>
   </section>
 
@@ -417,5 +427,7 @@
 </div>
 
 <script src="assets/js/main.js"></script>
+<!-- GoHighLevel widget resizer — auto-sizes the booking calendar and the inquiry form -->
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
