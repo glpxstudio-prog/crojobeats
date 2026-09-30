@@ -349,8 +349,21 @@ p{ margin:0 0 1rem; }
   overflow:hidden;
   padding:8px;
 }
+/* GoHighLevel's form_embed.js hides booking widgets by default (it only expects
+   forms and surveys). It sets inline styles without !important, so these win. */
 .calendar iframe{
-  display:block; width:100%; min-height:700px; border:0; background:#fff;
+  display:block !important;
+  width:100% !important;
+  height:760px !important;
+  min-height:760px !important;
+  border:0;
+  background:#fff;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+  position:relative !important;
+  left:auto !important;
+  top:auto !important;
 }
 .calendar__fallback{ text-align:center; padding:clamp(46px,7vw,76px) 26px; }
 .calendar__icon{ font-size:2.6rem; line-height:1; margin-bottom:14px; }
