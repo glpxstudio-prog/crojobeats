@@ -457,13 +457,24 @@
           <p class="about__sign">— Cannis Rojo</p>
         </div>
 
-        <aside class="about__panel">
+                <aside class="about__side">
+          <!--
+            Portrait of Cannis. Upload the optimised file to assets/img/cannis.jpg
+            (Add file → Upload files, and type the assets/img/ path in front of the
+            filename). Until that file exists the image hides itself, so nothing
+            breaks — no broken-image icon, the panel below just moves up.
+          -->
+          <img class="about__photo" src="assets/img/cannis.jpg" alt="Cannis Rojo at the studio"
+               loading="lazy" onerror="this.remove()">
+
+          <div class="about__panel">
           <dl class="factlist">
             <div><dt>Hours</dt><dd>Mon – Fri, 9:00 am – 6:00 pm<br><span>Sat &amp; Sun closed</span></dd></div>
             <div><dt>Where</dt><dd>5023 Suncatcher Drive<br><span>Wesley Chapel, FL 33545</span></dd></div>
             <div><dt>Sessions</dt><dd>60-minute blocks<br><span>Booked on the hour</span></dd></div>
           </dl>
           <a class="btn btn--ghost btn--full" href="https://maps.google.com/?q=5023+Suncatcher+Drive,+Wesley+Chapel,+FL+33545" target="_blank" rel="noopener">Get directions</a>
+          </div>
         </aside>
       </div>
 
