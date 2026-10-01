@@ -800,3 +800,9 @@ body.player-open{ padding-bottom:66px; }
 .about__lead{ text-align:center; margin-inline:auto; }
 .chips{ justify-content:center; }
 .tiers--single{ justify-content:center; }
+
+
+/* Stat row captions: the span is capped narrower than its cell, so it needs
+   auto margins to sit centred, and the cell needs symmetric padding. */
+.statrow li{ padding-inline:26px; }
+.statrow span{ margin-inline:auto; }
