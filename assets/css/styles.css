@@ -806,3 +806,5 @@ body.player-open{ padding-bottom:66px; }
    auto margins to sit centred, and the cell needs symmetric padding. */
 .statrow li{ padding-inline:26px; }
 .statrow span{ margin-inline:auto; }
+
+.roster{ justify-content:center; }
