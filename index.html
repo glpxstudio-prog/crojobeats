@@ -458,14 +458,15 @@
         </div>
 
                 <aside class="about__side">
-          <!--
-            Portrait of Cannis. Upload the optimised file to assets/img/cannis.jpg
-            (Add file → Upload files, and type the assets/img/ path in front of the
-            filename). Until that file exists the image hides itself, so nothing
-            breaks — no broken-image icon, the panel below just moves up.
+                    <!--
+            Portrait of Cannis. This points at the file as uploaded, which sits in
+            the repo root. It is a 10.3 MB camera original — replace it with a
+            resized copy (about 1600px wide, JPEG quality ~70) and update the src
+            below, ideally to assets/img/cannis.jpg. The image removes itself if
+            the file is ever missing, so the layout never breaks.
           -->
-          <img class="about__photo" src="assets/img/cannis.jpg" alt="Cannis Rojo at the studio"
-               loading="lazy" onerror="this.remove()">
+          <img class="about__photo" src="FME%20Shoot%20Sep%20246363%20copy.jpg"
+               alt="Cannis Rojo" loading="lazy" decoding="async" onerror="this.remove()">
 
           <div class="about__panel">
           <dl class="factlist">
