@@ -717,3 +717,39 @@ body.player-open{ padding-bottom:66px; }
 .tiers--single{
   grid-template-columns:minmax(0,420px); justify-content:center;
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   LOGO — the real Cannis Rojo marks, added once the artwork arrived.
+   Both PNGs are white artwork on transparency, so they sit on the dark
+   background with no extra treatment. These override the older text
+   lockup rules above.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* CR monogram in the nav and footer, replacing the old gradient square. */
+.brand__logo{
+  height:38px; width:auto; display:block;
+  flex:0 0 auto;
+  transition:transform .18s ease, filter .18s ease;
+}
+.brand:hover .brand__logo{
+  transform:translateY(-1px);
+  filter:drop-shadow(0 0 12px rgba(224,27,46,.55));
+}
+
+/* Hero wordmark. The h1 keeps the heading semantics; the alt text carries
+   the name for search engines and screen readers. */
+.hero__word{
+  margin:0 0 1.4rem;
+  line-height:1;
+}
+.hero__logo{
+  display:block;
+  width:min(680px, 88%);
+  height:auto;
+  filter:drop-shadow(0 18px 50px rgba(224,27,46,.22));
+}
+
+@media (max-width:560px){
+  .brand__logo{ height:32px; }
+  .hero__logo{ width:92%; }
+}
