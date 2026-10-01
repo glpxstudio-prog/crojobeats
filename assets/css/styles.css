@@ -789,3 +789,14 @@ body.player-open{ padding-bottom:66px; }
      border:1px solid var(--line);
      margin:0 auto 46px;
 }
+
+
+/* Centred section headers across the page.
+   Body copy inside cards and lists stays left-aligned for readability. */
+.eyebrow{ justify-content:center; }
+.display{ text-align:center; }
+.section__sub{ text-align:center; margin-inline:auto; }
+.section > .wrap > .note{ text-align:center; }
+.about__lead{ text-align:center; margin-inline:auto; }
+.chips{ justify-content:center; }
+.tiers--single{ justify-content:center; }
