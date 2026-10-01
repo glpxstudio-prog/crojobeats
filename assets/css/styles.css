@@ -768,3 +768,24 @@ body.player-open{ padding-bottom:66px; }
 @media (max-width:760px){
      .hero__banner{ border-radius:14px; }
 }
+
+
+/* Centred hero */
+.hero__inner{ text-align:center; }
+.hero__banner{ margin-inline:auto; max-width:100%; }
+.hero__credentials{ justify-content:center; flex-wrap:wrap; }
+.hero__cta{ justify-content:center; flex-wrap:wrap; }
+.hero__inner .lede{ margin-inline:auto; }
+
+/* Portrait leads the About section, above the bio */
+.about__portrait{
+     display:block;
+     width:100%;
+     max-width:460px;
+     aspect-ratio:4/5;
+     object-fit:cover;
+     object-position:center 18%;
+     border-radius:var(--radius-lg);
+     border:1px solid var(--line);
+     margin:0 auto 46px;
+}
