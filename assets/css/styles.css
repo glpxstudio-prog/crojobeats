@@ -668,3 +668,52 @@ body.player-open{ padding-bottom:66px; }
   font-family:var(--display); font-size:1.35rem; letter-spacing:.02em;
   margin:0 0 22px; padding-bottom:16px; border-bottom:1px solid var(--line);
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PRICING — added when the real rates came in.
+   These sit at the end of the file on purpose, so they override the base
+   rules above without anyone having to hunt through the middle of the sheet.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Service name and its price share a baseline, and wrap on narrow screens. */
+.svc__item h3{
+  display:flex; align-items:baseline; gap:14px; flex-wrap:wrap;
+}
+.svc__item p a{
+  color:var(--red-soft); text-decoration:none;
+  border-bottom:1px solid rgba(255,71,87,.35);
+}
+.svc__item p a:hover{ border-color:var(--red-soft); }
+
+.svc__price{
+  font-family:var(--display); font-size:1.25rem; letter-spacing:.03em;
+  color:var(--red-soft); white-space:nowrap;
+}
+.svc__price small{
+  font-family:var(--font); font-size:.72rem; font-weight:500;
+  letter-spacing:.04em; color:var(--dim);
+}
+
+/* The two beat licence tiers, above the beat list. */
+.licenses{
+  list-style:none; margin:0 0 34px; padding:0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px;
+}
+.licenses li{
+  display:grid; grid-template-columns:1fr auto; gap:4px 16px;
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--radius); padding:20px 22px;
+}
+.licenses__name{ font-weight:600; font-size:.98rem; align-self:center; }
+.licenses__price{
+  font-family:var(--display); font-size:1.5rem; letter-spacing:.03em;
+  color:var(--red-soft); align-self:center;
+}
+.licenses__note{
+  grid-column:1 / -1; color:var(--dim); font-size:.84rem; line-height:1.5;
+}
+
+/* One membership, so don't stretch the card across the full width. */
+.tiers--single{
+  grid-template-columns:minmax(0,420px); justify-content:center;
+}
