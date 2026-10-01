@@ -661,3 +661,10 @@ body.player-open{ padding-bottom:66px; }
   .wave span{ height:24px; }
   *,*::before,*::after{ transition-duration:.01ms !important; }
 }
+
+
+/* Label on the studio facts panel inside the About section. */
+.about__panel-title{
+  font-family:var(--display); font-size:1.35rem; letter-spacing:.02em;
+  margin:0 0 22px; padding-bottom:16px; border-bottom:1px solid var(--line);
+}
