@@ -485,6 +485,16 @@ h3{ font-size:1.1rem; font-weight:650; letter-spacing:0; }
   color:var(--text) !important; margin-top:1.8rem;
 }
 
+/* Right column: portrait stacked above the facts panel.
+   The <img> removes itself if the file isn't there yet, so the panel
+   simply moves up and nothing looks broken. */
+.about__side{ display:grid; gap:18px; align-content:start; }
+
+.about__photo{
+  display:block; width:100%; aspect-ratio:4/5; object-fit:cover;
+  border-radius:var(--radius-lg); border:1px solid var(--line);
+}
+
 .about__panel{
   background:var(--surface); border:1px solid var(--line);
   border-radius:var(--radius-lg); padding:30px 28px;
