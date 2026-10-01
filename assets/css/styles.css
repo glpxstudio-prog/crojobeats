@@ -753,3 +753,18 @@ body.player-open{ padding-bottom:66px; }
   .brand__logo{ height:32px; }
   .hero__logo{ width:92%; }
 }
+
+
+/* Hero banner artwork (replaces the standalone wordmark; the banner has it baked in) */
+.hero__banner{
+     display:block;
+     width:100%;
+     max-width:880px;
+     height:auto;
+     border-radius:18px;
+     border:1px solid rgba(255,255,255,.07);
+     box-shadow:0 26px 70px rgba(0,0,0,.55), 0 0 70px rgba(224,27,46,.16);
+}
+@media (max-width:760px){
+     .hero__banner{ border-radius:14px; }
+}
