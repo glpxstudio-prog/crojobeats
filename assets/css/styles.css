@@ -288,36 +288,48 @@ h3{ font-size:1.1rem; font-weight:650; letter-spacing:0; }
 .section{ padding:clamp(66px,9vw,120px) 0; }
 .section--alt{ background:var(--bg-alt); border-block:1px solid var(--line-soft); }
 
-/* ── Selected work / credits ────────────────────────────────────────────── */
+/* ── Selected work ──────────────────────────────────────────────────────── */
 
-.credits{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+/* Roster of artists produced */
+.roster{
+  display:flex; flex-wrap:wrap; gap:10px;
+  list-style:none; margin:0 0 2.6rem; padding:0;
+}
+.roster li{
+  font-family:var(--display); font-size:1.15rem; letter-spacing:.05em;
+  text-transform:uppercase; color:var(--muted);
+  border:1px solid var(--line); border-radius:999px;
+  padding:.3em 1em; line-height:1.5;
+  transition:color .18s ease, border-color .18s ease;
+}
+.roster li:hover{ color:var(--text); border-color:var(--red); }
+
+/* Highlight releases — typographic, no cover art needed */
+.credits{ display:grid; grid-template-columns:repeat(auto-fit,minmax(252px,1fr)); gap:18px; }
 
 .credit{
   background:var(--surface); border:1px solid var(--line);
-  border-radius:var(--radius-lg); overflow:hidden;
+  border-radius:var(--radius-lg); padding:26px 24px 28px;
   transition:border-color .22s ease, transform .22s ease;
 }
 .credit:hover{ border-color:rgba(224,27,46,.45); transform:translateY(-4px); }
 
-.credit__art{
-  aspect-ratio:1/1; display:grid; place-items:center;
-  background:
-    repeating-linear-gradient(45deg, var(--surface-2) 0 12px, transparent 12px 24px),
-    var(--surface);
-  border-bottom:1px solid var(--line);
-}
-.credit__art span{
-  font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--dim);
-}
-img.credit__art{ object-fit:cover; width:100%; }
-
-.credit__meta{ padding:20px 22px 24px; }
 .credit__role{
-  font-size:.68rem; font-weight:650; letter-spacing:.18em; text-transform:uppercase;
-  color:var(--red-soft); margin:0 0 .5rem;
+  font-size:.66rem; font-weight:650; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--red-soft); margin:0 0 .8rem;
 }
-.credit__meta h3{ margin:0 0 .35rem; font-size:1.02rem; }
-.credit__note{ margin:0; font-size:.85rem; color:var(--muted); }
+.credit h3{
+  font-family:var(--display); font-size:2rem; letter-spacing:.03em;
+  text-transform:uppercase; line-height:1; margin:0 0 .3rem;
+}
+.credit__artist{
+  margin:0 0 .9rem; font-size:.95rem; font-weight:600; color:var(--text);
+}
+.credit__note{ margin:0; font-size:.86rem; color:var(--muted); }
+
+/* Spotify catalog embed */
+.spotify{ margin-top:26px; border-radius:var(--radius-lg); overflow:hidden; }
+.spotify iframe{ display:block; width:100%; border:0; border-radius:var(--radius-lg); }
 
 /* ── Beat catalog ───────────────────────────────────────────────────────── */
 
