@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=9">
+<link rel="stylesheet" href="assets/css/styles.css?v=11">
 
 <script type="application/ld+json">
 {
@@ -427,15 +427,27 @@
     <div class="wrap">
       <p class="eyebrow"><i></i>Pick your time</p>
       <h2 class="display">Book a <span>session.</span></h2>
-              <p class="section__sub">Live availability straight from the studio calendar. Pick a slot and you'll get a confirmation by email. Sessions are booked in one-hour slots &mdash; need longer? Book back-to-back slots. Recording runs $45 an hour in studio, $60 mobile.</p>
+                    <p class="section__sub">Live availability straight from the calendar. Pick a slot and you'll get a confirmation by email. Sessions are booked in one-hour slots &mdash; need longer? Book back-to-back slots.</p>
+
+      <!-- Studio / mobile switch. Each option is its own GoHighLevel calendar
+           because the price differs: $45/hr in studio, $60/hr mobile. -->
+      <div class="bookmode" role="tablist" aria-label="Session type">
+        <button type="button" class="bookmode__btn is-on" role="tab" aria-selected="true"
+                aria-controls="cal-studio" data-cal="studio">
+          In studio <small>$45/hr</small>
+        </button>
+        <button type="button" class="bookmode__btn" role="tab" aria-selected="false"
+                aria-controls="cal-mobile" data-cal="mobile">
+          Mobile <small>$60/hr &middot; we come to you</small>
+        </button>
+      </div>
 
       <!--
-        GoHighLevel booking calendar: "Studio Session"
+        GoHighLevel booking calendar — "Studio Session"
         Calendar ID: QTbw4GLE0MvALS8kEc63
-        Charges $45 upfront at booking. Members book free on the separate
-        "Member Session" calendar: /widget/bookings/crojobeats-member-session
+        Bookings create a contact in the Cannis Rojo Production CRM automatically.
       -->
-      <div class="calendar">
+      <div class="calendar" id="cal-studio" role="tabpanel">
         <iframe
           src="https://api.leadconnectorhq.com/widget/booking/QTbw4GLE0MvALS8kEc63"
           id="QTbw4GLE0MvALS8kEc63_1759000000000"
@@ -451,11 +463,33 @@
           scrolling="no"></iframe>
       </div>
 
+      <!--
+        GoHighLevel booking calendar — "Mobile Session"
+        Calendar ID: g0BSPpKqbDqEGCSWLi0Q
+        Separate calendar because mobile is $60/hr, not $45. The booker supplies
+        their own address, which arrives on the appointment.
+      -->
+      <div class="calendar is-hidden" id="cal-mobile" role="tabpanel">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/booking/g0BSPpKqbDqEGCSWLi0Q"
+          id="g0BSPpKqbDqEGCSWLi0Q_1759000000001"
+          data-layout='{"id":"INLINE"}'
+          data-trigger-type="alwaysShow"
+          data-activation-type="alwaysActivated"
+          data-deactivation-type="neverDeactivate"
+          data-form-name="Mobile Session"
+          data-height="700"
+          data-layout-iframe-id="g0BSPpKqbDqEGCSWLi0Q_1759000000001"
+          data-form-id="g0BSPpKqbDqEGCSWLi0Q"
+          title="Book a mobile recording session with Cannis Rojo Production"
+          scrolling="no"></iframe>
+      </div>
+
       <p class="note">
         Members: your 8 monthly hours are booked on your own calendar, ask for the link.
-        Not loading? <a href="https://api.leadconnectorhq.com/widget/booking/QTbw4GLE0MvALS8kEc63" target="_blank" rel="noopener">Open it in a new tab →</a>
+        Not loading? <a href="https://api.leadconnectorhq.com/widget/booking/QTbw4GLE0MvALS8kEc63" target="_blank" rel="noopener">Open the studio calendar</a>
+        or <a href="https://api.leadconnectorhq.com/widget/booking/g0BSPpKqbDqEGCSWLi0Q" target="_blank" rel="noopener">the mobile one</a> in a new tab.
       </p>
-
       <!-- How a session actually runs. Lives here, next to the calendar. -->
       <ol class="flow">
         <li>
