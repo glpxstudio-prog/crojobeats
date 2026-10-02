@@ -200,4 +200,27 @@
         });
     });
   }
+
+     /* Studio / mobile booking switch. Two separate GoHighLevel calendars,
+          because the price differs. Show one, hide the other. */
+     var modeBtns = document.querySelectorAll('.bookmode__btn');
+     if (modeBtns.length) {
+            var panels = {
+                     studio: document.getElementById('cal-studio'),
+                     mobile: document.getElementById('cal-mobile')
+            };
+            Array.prototype.forEach.call(modeBtns, function (btn) {
+                     btn.addEventListener('click', function () {
+                                var want = btn.getAttribute('data-cal');
+                                Array.prototype.forEach.call(modeBtns, function (b) {
+                                             var on = b === btn;
+                                             b.classList.toggle('is-on', on);
+                                             b.setAttribute('aria-selected', on ? 'true' : 'false');
+                                });
+                                Object.keys(panels).forEach(function (key) {
+                                             if (panels[key]) panels[key].classList.toggle('is-hidden', key !== want);
+                                });
+                     });
+            });
+     }
 })();
