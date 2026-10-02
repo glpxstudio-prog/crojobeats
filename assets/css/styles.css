@@ -808,3 +808,15 @@ body.player-open{ padding-bottom:66px; }
 .statrow span{ margin-inline:auto; }
 
 .roster{ justify-content:center; }
+
+
+/* Centred About section: one column, centred, instead of copy-left / panel-right */
+.about{
+     grid-template-columns:1fr;
+     max-width:720px;
+     margin-inline:auto;
+     gap:40px;
+}
+.about__copy p{ margin-inline:auto; }
+.about__sign{ text-align:center; }
+.about__side{ max-width:460px; margin-inline:auto; width:100%; }
