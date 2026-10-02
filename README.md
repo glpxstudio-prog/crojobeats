@@ -43,7 +43,7 @@ Two published GoHighLevel workflows handle the 8-hour allowance.
 
 **Monthly reset of member session counter.** Runs on the 1st of each month at 00:15 and sets the field back to 0.
 
-Two things this does **not** do, by design. It counts bookings, not hours, so a 2-hour session still counts as 1. And it alerts rather than blocks — nothing stops a member booking a 9th session. The Member Session calendar is also a private link rather than a gated page, so anyone with the URL could book on it.
+Both calendars use fixed 1-hour slots, so one booking is one hour and the count equals the hours used. Someone wanting a longer session books consecutive slots, which counts and prices correctly. If a second meeting duration is ever added to either calendar, that stops being true and the counter needs rethinking. What the workflow does not do is block: it alerts rather than stops, so nothing prevents a member booking a 9th session. The Member Session calendar is also a private link rather than a gated page, so anyone with the URL could book on it.
 
 ---
 
